@@ -96,3 +96,26 @@ Percentage of the requests served within a certain time (ms)
 13.25user 6.52system ...elapsed ...CPU (0avgtext+0avgdata 1769220maxresident)k
 0inputs+0outputs (0major+541845minor)pagefaults 0swaps
 ```
+
+# Notes
+
+The first run of `ab` fails with a timeout:
+
+```
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 2000 requests
+Completed 4000 requests
+Completed 6000 requests
+Completed 8000 requests
+Completed 10000 requests
+Completed 12000 requests
+Completed 14000 requests
+Completed 16000 requests
+Completed 18000 requests
+apr_pollset_poll: The timeout specified has expired (70007)
+Total of 19640 requests completed
+```
